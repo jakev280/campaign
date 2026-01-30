@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixing Gorton & Denton | Hannah Spencer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .wrench-cursor { cursor: url('https://img.icons8.com/ios-filled/25/000000/wrench.png'), auto; }
+    </style>
+</head>
+<body class="bg-slate-100 font-mono wrench-cursor">
+
+    <div class="max-w-2xl mx-auto py-10 px-6">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-black text-green-700 uppercase tracking-tighter">Why Gorton Needs a Plumber</h1>
+            <p class="mt-2 text-slate-600 font-bold">BY-ELECTION 26 February 2026: HANNAH SPENCER FOR THE GREENS</p>
+        </header>
+
+        <div class="bg-white border-2 border-slate-800 shadow-[8px_8px_0px_0px_rgba(22,101,52,1)] p-6 space-y-6">
+            <h2 class="border-b-2 border-slate-800 pb-2 font-bold text-xl uppercase italic">Current Status: SYSTEM CRITICAL</h2>
+
+            <div class="group border-l-4 border-red-500 pl-4 py-2 hover:bg-red-50 transition">
+                <h3 class="font-black text-lg">LEAK: Energy Bills</h3>
+                <p class="text-sm text-slate-600 mb-2">Our houses are cold and our money is pouring out through the walls.</p>
+                <button onclick="toggleFix('bill-fix')" class="text-xs bg-slate-800 text-white px-3 py-1 uppercase font-bold hover:bg-green-600">Apply Hannah's Fix</button>
+                <div id="bill-fix" class="hidden mt-3 text-green-800 font-bold">
+                    🔧 Hannah's "Homes Guarantee": A mass insulation program for Gorton & Denton to stop the heat escaping and lower bills forever.
+                </div>
+            </div>
+
+            <div class="group border-l-4 border-red-500 pl-4 py-2 hover:bg-red-50 transition">
+                <h3 class="font-black text-lg">BLOCKAGE: The NHS</h3>
+                <p class="text-sm text-slate-600 mb-2">Waiting lists are backed up and staff are burnt out.</p>
+                <button onclick="toggleFix('nhs-fix')" class="text-xs bg-slate-800 text-white px-3 py-1 uppercase font-bold hover:bg-green-600">Apply Hannah's Fix</button>
+                <div id="nhs-fix" class="hidden mt-3 text-green-800 font-bold">
+                    🔧 Invest in the frontline: Fair pay for nurses and dentists, and ending the "private drain" on our public health service.
+                </div>
+            </div>
+
+            <div class="group border-l-4 border-red-500 pl-4 py-2 hover:bg-red-50 transition">
+                <h3 class="font-black text-lg">POISON: Local Air Quality</h3>
+                <p class="text-sm text-slate-600 mb-2">Traffic pollution is clogging our kids' lungs near the M60.</p>
+                <button onclick="toggleFix('air-fix')" class="text-xs bg-slate-800 text-white px-3 py-1 uppercase font-bold hover:bg-green-600">Apply Hannah's Fix</button>
+                <div id="air-fix" class="hidden mt-3 text-green-800 font-bold">
+                    🔧 Real Green Transport: Cheaper, cleaner buses and safer cycling routes—not just talk, but actual infrastructure.
+                </div>
+            </div>
+        </div>
+
+      
+    </div>
+
+    <script>
+        function toggleFix(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
+        }
+    </script>
+
+    <div class="bg-zinc-900 text-green-400 p-6 font-mono border-4 border-zinc-700 shadow-2xl rounded-sm">
+        <h2 class="text-xl font-bold mb-4 border-b border-green-900 pb-2 italic">>> SYSTEM DIAGNOSTIC: GORTON & DENTON</h2>
+        
+        <div class="space-y-4">
+            <div class="border border-green-900 p-4 hover:border-green-400 transition cursor-pointer" onclick="toggleFix('poverty')">
+                <span class="text-red-500">[!] ERROR:</span> Child Poverty in Gorton
+                <div id="poverty" class="hidden mt-2 text-white text-sm">
+                    <p>Hannah says: "Muslims don't keep me awake at night. What keeps me up is child poverty."</p>
+                    <p class="mt-2 text-green-400 font-bold">FIX: End the two-child benefit cap and invest in local school breakfast clubs.</p>
+                </div>
+            </div>
+
+            <div class="border border-green-900 p-4 hover:border-green-400 transition cursor-pointer" onclick="toggleFix('reform')">
+                <span class="text-red-500">[!] ERROR:</span> "Referendum on Starmer" Rhetoric
+                <div id="reform" class="hidden mt-2 text-white text-sm">
+                    <p>Matt Goodwin (Reform) calls this a "referendum." Hannah calls it a community in need of a repair.</p>
+                    <p class="mt-2 text-green-400 font-bold">FIX: Choose "Hope over Hate." Vote for a representative who actually lives and works here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleFix(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
+        }
+    </script>
+
+    <div class="mt-10 text-center border-t-2 border-slate-300 pt-6">
+        <p class="text-sm font-bold uppercase mb-4">Know someone else who's tired of the leaks?</p>
+        <a href="https://api.whatsapp.com/send?text=Politics%20is%20leaking.%20Gorton%20needs%20a%20plumber.%20Check%20out%20Hannah%20Spencer%27s%20plan%20to%20fix%20our%20community:%20[YOUR_URL_HERE]" 
+        target="_blank" 
+        class="inline-flex items-center bg-green-500 text-white font-black px-6 py-3 rounded-full hover:bg-green-600 transition shadow-lg">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.67-1.611-.918-2.206-.242-.579-.487-.5-.67-.51-.172-.01-.37-.012-.568-.012-.199 0-.523.074-.797.373-.273.3-.1.979 1.042 1.344 1.143 1.144 2.246 2.503 2.91 3.16.664.656 1.32 1.312 2.64 2.624 1.32 1.312 2.64 2.624 2.64 2.624 0 0 1.32 1.312 2.64 2.624.13.13.26.26.39.39.13-.13.26-.26.39-.39z"/></svg>
+            SHARE ON WHATSAPP
+        </a>
+    </div>
+
+    <div class="mt-6 text-center">
+        <a href="https://www.youtube.com/watch?v=RfUx9v85VUg" 
+            class="inline-block bg-green-600 text-white font-black px-6 py-3 rounded-full hover:bg-green-700 transition shadow-lg">
+            LEARN MORE ABOUT HANNAH SPENCER
+        </a>
+    </div>
+
+</body>
+</html>
