@@ -7,49 +7,153 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .wrench-cursor { cursor: url('https://img.icons8.com/ios-filled/25/000000/wrench.png'), auto; }
+        /* Clean transition for expanding sections */
+        .fix-content { transition: all 0.3s ease; }
     </style>
     <link rel="icon" href="https://fav.farm/🔧" />
 </head>
-<body class="bg-slate-100 font-mono wrench-cursor">
+<body class="bg-slate-100 font-mono wrench-cursor text-slate-900">
 
     <div class="max-w-2xl mx-auto py-10 px-6">
-        <header class="text-center mb-12">
-            <h1 class="text-4xl font-black text-green-700 uppercase tracking-tighter">Why Gorton Needs a Plumber</h1>
-            <p class="mt-2 text-slate-600 font-bold">BY-ELECTION 26 February 2026: HANNAH SPENCER FOR THE GREENS</p>
+        
+        <header class="text-center mb-10">
+            <h1 class="text-4xl sm:text-5xl font-black text-green-700 uppercase tracking-tighter leading-none">
+                Why Gorton <br class="sm:hidden"> Needs a Plumber
+            </h1>
+            <p class="mt-4 text-slate-600 font-bold uppercase text-sm tracking-wide">
+                BY-ELECTION 26 February 2026 <br>
+                <span class="text-slate-900">Hannah Spencer for the Greens</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                <a href="https://api.whatsapp.com/send?text=Politics%20is%20leaking.%20Gorton%20needs%20a%20plumber.%20Check%20out%20Hannah%20Spencer%27s%20plan%20to%20fix%20our%20community:%20https://www.greengorton.co.uk" 
+                target="_blank" 
+                class="w-full sm:w-auto bg-green-700 text-white font-black px-6 py-3 rounded-full hover:bg-green-800 transition shadow-lg text-xs uppercase tracking-widest">
+                    Share on Whatsapp
+                </a>
+                <a href="https://www.youtube.com/watch?v=RfUx9v85VUg" 
+                target="_blank"
+                class="w-full sm:w-auto border-2 border-green-700 text-green-700 font-black px-6 py-3 rounded-full hover:bg-green-50 transition text-xs uppercase tracking-widest">
+                    About Hannah
+                </a>
+            </div>
         </header>
 
-        <div class="bg-white border-2 border-slate-800 shadow-[8px_8px_0px_0px_rgba(22,101,52,1)] p-6 space-y-6">
-            <h2 class="border-b-2 border-slate-800 pb-2 font-bold text-xl uppercase italic">Current Status: SYSTEM CRITICAL</h2>
+        <section class="mb-10">
+            <div class="bg-white border-2 border-slate-800 shadow-[8px_8px_0px_0px_rgba(22,101,52,1)] p-6 space-y-8">
+                <h2 class="border-b-2 border-slate-800 pb-2 font-black text-xl uppercase italic tracking-tight">
+                    Current Status: <span class="text-red-600">System Critical</span>
+                </h2>
 
-            <div class="group border-l-4 border-red-500 pl-4 py-2 hover:bg-red-50 transition">
-                <h3 class="font-black text-lg">LEAK: Energy Bills</h3>
-                <p class="text-sm text-slate-600 mb-2">Our houses are cold and our money is pouring out through the walls.</p>
-                <button onclick="toggleFix('bill-fix')" class="text-xs bg-slate-800 text-white px-3 py-1 uppercase font-bold hover:bg-green-600">Apply Hannah's Fix</button>
-                <div id="bill-fix" class="hidden mt-3 text-green-800 font-bold">
-                    🔧 Hannah's "Homes Guarantee": A mass insulation program for Gorton & Denton to stop the heat escaping and lower bills forever.
+                <div class="group border-l-4 border-red-500 pl-4 py-1">
+                    <h3 class="font-black text-lg uppercase">LEAK: Energy Bills</h3>
+                    <p class="text-sm text-slate-600 mb-3">Our houses are cold and our money is pouring out through the walls.</p>
+                    <div class="flex flex-wrap items-center gap-3">
+                        <button onclick="toggleFix('bill-fix')" class="text-xs bg-slate-800 text-white px-3 py-2 uppercase font-bold hover:bg-green-600 transition">Apply Hannah's Fix</button>
+                        <a href="https://green-alliance.org.uk/" target="_blank" class="text-[10px] text-slate-400 underline hover:text-green-700 font-bold uppercase">🔍 Click Here: View Data</a>
+                    </div>
+                    <div id="bill-fix" class="hidden mt-4 p-3 bg-green-50 text-green-800 font-bold border border-green-200">
+                        🔧 Hannah's "Homes Guarantee": A mass insulation program for Gorton & Denton to stop the heat escaping and keep bills down.
+                    </div>
+                </div>
+
+                <div class="group border-l-4 border-red-500 pl-4 py-1">
+                    <h3 class="font-black text-lg uppercase">BLOCKAGE: The NHS</h3>
+                    <p class="text-sm text-slate-600 mb-3">Waiting lists are backed up and staff are burnt out.</p>
+                    <div class="flex flex-wrap items-center gap-3">
+                        <button onclick="toggleFix('nhs-fix')" class="text-xs bg-slate-800 text-white px-3 py-2 uppercase font-bold hover:bg-green-600 transition">Apply Hannah's Fix</button>
+                        <a href="https://www.myplannedcare.nhs.uk/nwest/manchester/" target="_blank" class="text-[10px] text-slate-400 underline hover:text-green-700 font-bold uppercase">🔍 Click Here: Local Wait Times</a>
+                    </div>
+                    <div id="nhs-fix" class="hidden mt-4 p-3 bg-green-50 text-green-800 font-bold border border-green-200">
+                        🔧 Invest in the frontline: Fair pay for nurses and dentists, and ending the "private drain" on our public health service.
+                    </div>
+                </div>
+
+                <div class="group border-l-4 border-red-500 pl-4 py-1">
+                    <h3 class="font-black text-lg uppercase">POISON: Air Quality</h3>
+                    <p class="text-sm text-slate-600 mb-3">Traffic pollution is clogging our kids' lungs near the M60.</p>
+                    <div class="flex flex-wrap items-center gap-3">
+                        <button onclick="toggleFix('air-fix')" class="text-xs bg-slate-800 text-white px-3 py-2 uppercase font-bold hover:bg-green-600 transition">Apply Hannah's Fix</button>
+                        <a href="https://cleanairgm.com/" target="_blank" class="text-[10px] text-slate-400 underline hover:text-green-700 font-bold uppercase">🔍 Click Here: Live Air Data</a>
+                    </div>
+                    <div id="air-fix" class="hidden mt-4 p-3 bg-green-50 text-green-800 font-bold border border-green-200">
+                        🔧 Real Green Transport: Cheaper, cleaner buses and safer cycling routes—not just talk, but actual infrastructure.
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="group border-l-4 border-red-500 pl-4 py-2 hover:bg-red-50 transition">
-                <h3 class="font-black text-lg">BLOCKAGE: The NHS</h3>
-                <p class="text-sm text-slate-600 mb-2">Waiting lists are backed up and staff are burnt out.</p>
-                <button onclick="toggleFix('nhs-fix')" class="text-xs bg-slate-800 text-white px-3 py-1 uppercase font-bold hover:bg-green-600">Apply Hannah's Fix</button>
-                <div id="nhs-fix" class="hidden mt-3 text-green-800 font-bold">
-                    🔧 Invest in the frontline: Fair pay for nurses and dentists, and ending the "private drain" on our public health service.
+        <section class="mb-10">
+            <div class="bg-zinc-900 text-green-400 p-6 font-mono border-4 border-zinc-800 shadow-2xl rounded-sm">
+                <h2 class="text-lg font-bold mb-6 border-b border-green-900 pb-2 italic flex items-center gap-2">
+                    <span class="animate-pulse">●</span> >> SYSTEM DIAGNOSTIC: GORTON & DENTON
+                </h2>
+                
+                <div class="space-y-4">
+                    <div class="border border-green-900 p-4 hover:border-green-400 transition cursor-pointer group" onclick="toggleFix('poverty')">
+                        <div class="flex justify-between items-center">
+                            <span><span class="text-red-500 font-bold">[!] ERROR:</span> Child Poverty</span>
+                            <span class="text-xs opacity-50 group-hover:opacity-100 uppercase">View Log</span>
+                        </div>
+                        <div id="poverty" class="hidden mt-4 text-white text-sm border-t border-green-900 pt-4">
+                            <p class="italic">"Muslims don't keep me awake at night. What keeps me up is child poverty." [00:05:01]</p>
+                            <p class="mt-3 text-green-400 font-bold uppercase">FIX: End the two-child benefit cap and invest in school breakfast clubs.</p>
+                        </div>
+                    </div>
+
+                    <div class="border border-green-900 p-4 hover:border-green-400 transition cursor-pointer group" onclick="toggleFix('reform')">
+                        <div class="flex justify-between items-center">
+                            <span><span class="text-red-500 font-bold">[!] ERROR:</span> Division Rhetoric</span>
+                            <span class="text-xs opacity-50 group-hover:opacity-100 uppercase">View Log</span>
+                        </div>
+                        <div id="reform" class="hidden mt-4 text-white text-sm border-t border-green-900 pt-4">
+                            <p class="italic">Reform calls this a "referendum." Hannah calls it a community in need of repair.</p>
+                            <p class="mt-3 text-green-400 font-bold uppercase">FIX: Choose Hope over Hate. Vote for a local who lives here.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="group border-l-4 border-red-500 pl-4 py-2 hover:bg-red-50 transition">
-                <h3 class="font-black text-lg">POISON: Local Air Quality</h3>
-                <p class="text-sm text-slate-600 mb-2">Traffic pollution is clogging our kids' lungs near the M60.</p>
-                <button onclick="toggleFix('air-fix')" class="text-xs bg-slate-800 text-white px-3 py-1 uppercase font-bold hover:bg-green-600">Apply Hannah's Fix</button>
-                <div id="air-fix" class="hidden mt-3 text-green-800 font-bold">
-                    🔧 Real Green Transport: Cheaper, cleaner buses and safer cycling routes—not just talk, but actual infrastructure.
+        <section>
+            <div class="p-6 bg-white border-2 border-slate-800 rounded-lg shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                <h3 class="font-black text-xl uppercase mb-1 flex items-center gap-2">
+                    🔧 Check your tools!
+                </h3>
+                <p class="text-sm mb-6 italic text-slate-700 font-bold">You need a Photo ID to vote on Feb 26th.</p>
+                
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="flex flex-col gap-1">
+                        <a href="https://www.gov.uk/register-to-vote" target="_blank" 
+                        class="bg-green-700 text-white text-center py-4 px-6 font-black uppercase tracking-tight hover:bg-green-800 transition shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-lg">
+                        Click Here: Register to Vote
+                        </a>
+                        <span class="text-[10px] text-red-600 font-black uppercase mt-1">Deadline: Midnight 10 Feb</span>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <a href="https://www.gov.uk/apply-for-photo-id-voter-authority-certificate" target="_blank" 
+                        class="bg-slate-800 text-white text-center py-4 px-6 font-black uppercase tracking-tight hover:bg-slate-600 transition shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-lg">
+                        Click Here: Get Free Photo ID
+                        </a>
+                        <span class="text-[10px] text-red-600 font-black uppercase mt-1">Deadline: 5PM 18 Feb</span>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-      
+                <p class="mt-8 text-[10px] text-slate-500 leading-tight uppercase tracking-tight">
+                    *Accepted ID includes: Passport, Driving Licence, Blue Badge, or certain Travel Cards. Expired ID works if the photo is still a good likeness.
+                </p>
+            </div>
+        </section>
+
+        <footer class="mt-16 pb-10 text-center border-t border-slate-200 pt-8">
+            <p class="text-[10px] text-slate-400 uppercase tracking-[0.2em] leading-relaxed px-4 font-bold">
+                Promoted by Jake Virdee-Reynolds on behalf of Hannah Spencer & Manchester Green Party. 
+                <br class="hidden sm:block">
+                Members' Services Office, Town Hall Extension, PO Box 532, Manchester, M60 2LA.
+            </p>
+        </footer>
+
     </div>
 
     <script>
@@ -58,70 +162,5 @@
             el.classList.toggle('hidden');
         }
     </script>
-
-    <div class="bg-zinc-900 text-green-400 p-6 font-mono border-4 border-zinc-700 shadow-2xl rounded-sm">
-        <h2 class="text-xl font-bold mb-4 border-b border-green-900 pb-2 italic">>> SYSTEM DIAGNOSTIC: GORTON & DENTON</h2>
-        
-        <div class="space-y-4">
-            <div class="border border-green-900 p-4 hover:border-green-400 transition cursor-pointer" onclick="toggleFix('poverty')">
-                <span class="text-red-500">[!] ERROR:</span> Child Poverty in Gorton
-                <div id="poverty" class="hidden mt-2 text-white text-sm">
-                    <p>Hannah says: "Muslims don't keep me awake at night. What keeps me up is child poverty."</p>
-                    <p class="mt-2 text-green-400 font-bold">FIX: End the two-child benefit cap and invest in local school breakfast clubs.</p>
-                </div>
-            </div>
-
-            <div class="border border-green-900 p-4 hover:border-green-400 transition cursor-pointer" onclick="toggleFix('reform')">
-                <span class="text-red-500">[!] ERROR:</span> "Referendum on Starmer" Rhetoric
-                <div id="reform" class="hidden mt-2 text-white text-sm">
-                    <p>Matt Goodwin (Reform) calls this a "referendum." Hannah calls it a community in need of a repair.</p>
-                    <p class="mt-2 text-green-400 font-bold">FIX: Choose "Hope over Hate." Vote for a representative who actually lives and works here.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function toggleFix(id) {
-            const el = document.getElementById(id);
-            el.classList.toggle('hidden');
-        }
-    </script>
-    <section class="max-w-2xl mx-auto px-6 mt-10">
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
-            
-            <a href="https://api.whatsapp.com/send?text=Politics%20is%20leaking.%20Gorton%20needs%20a%20plumber.%20Check%20out%20Hannah%20Spencer%27s%20plan%20to%20fix%20our%20community:%20https://www.greengorton.co.uk" 
-            target="_blank" 
-            class="w-full sm:w-auto inline-block bg-green-700 text-white font-black px-6 py-4 rounded-full hover:bg-green-800 transition shadow-lg text-sm uppercase text-center tracking-tight">
-                Share on Whatsapp
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=RfUx9v85VUg" 
-            target="_blank"
-            class="w-full sm:w-auto inline-block bg-green-700 text-white font-black px-6 py-4 rounded-full hover:bg-green-800 transition shadow-lg text-sm uppercase text-center tracking-tight">
-                About Hannah
-            </a>
-
-        </div>
-
-        <div class="mt-10 p-6 bg-white border-2 border-slate-800 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <h3 class="font-black text-lg uppercase mb-2">Check your tools!</h3>
-            <p class="text-sm mb-4 italic">You need a Photo ID to vote on Feb 26th.</p>
-            <div class="flex flex-col space-y-2 mt-4">
-                <a href="https://www.gov.uk/register-to-vote" target="_blank" class="text-xs font-bold text-green-700 underline uppercase">Register to vote</a>
-                <a href="https://www.gov.uk/apply-for-photo-id-voter-authority-certificate" target="_blank" class="text-xs font-bold text-green-700 underline uppercase">Apply for free ID if needed</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="mt-16 pb-10 text-center border-t border-slate-200 pt-8">
-        <p class="text-[10px] text-slate-500 uppercase tracking-widest leading-relaxed px-4">
-            Promoted by Jake Virdee-Reynolds on behalf of Hannah Spencer & Manchester Green Party. 
-            <br class="hidden sm:block">
-            Labor donated by local volunteers. This site is independent and community-run.
-            <br class="hidden sm:block">
-            Members' Services Office at Manchester City Council, Town Hall Extension, PO Box 532, Manchester, M60 2LA
-        </p>
-    </footer>
 </body>
 </html>
